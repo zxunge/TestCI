@@ -43,7 +43,7 @@ jobs:
                 libwxgtk3.2-0-unofficial \
                 libwxgtk3.2unofficial-dev \
                 wx3.2-headers \
-                wx-common \
+                wx-common
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
     - name: Configure CMake
