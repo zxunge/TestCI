@@ -6,10 +6,19 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY bin)
 
-configure_file("${PROJECT_SOURCE_DIR}/include/version.h.in" "${PROJECT_SOURCE_DIR}/include/version.h")
+configure_file(
+    "${PROJECT_SOURCE_DIR}/include/version.h.in" 
+    "${PROJECT_SOURCE_DIR}/include/version.h"
+)
 
 include_directories(include)
-add_executable(${PROJECT_NAME} src/FPSApp.cpp src/FPSMain.cpp src/SplitThread.cpp src/fpsSplit.cpp)
+add_executable(
+    ${PROJECT_NAME} 
+    src/FPSApp.cpp 
+    src/FPSMain.cpp 
+    src/SplitThread.cpp 
+    src/fpsSplit.cpp
+)
 find_package(wxWidgets COMPONENTS core base html OPTIONAL_COMPONENTS adv xml xrc)
 if(wxWidgets_FOUND)
     include(${wxWidgets_USE_FILE})
