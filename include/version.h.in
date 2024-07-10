@@ -1,0 +1,17 @@
+#ifndef FPS_VERSION_H
+#define FPS_VERSION_H
+
+static const char fpsVersion_PROJECT_NAME[] = "@PROJECT_NAME@"
+
+//Software Status
+static const char fpsVersion_STATUS[] =  "Alpha";
+static const char fpsVersion_STATUS_SHORT[] =  "a";
+
+//Standard Version Type
+static const long fpsVersion_MAJOR  = @PROJECT_VERSION_MAJOR@;
+static const long fpsVersion_MINOR  = @PROJECT_VERSION_MINOR@;
+static const long fpsVersion_PATCH  = @PROJECT_VERSION_PATCH@;
+	
+static const char fpsVersion_FULLVERSION_STRING [] = "@PROJECT_VERSION@";
+
+#endif //FPS_VERSION_H
