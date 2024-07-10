@@ -1,7 +1,7 @@
 #ifndef FPS_VERSION_H
 #define FPS_VERSION_H
 
-static const char fpsVersion_PROJECT_NAME[] = "@PROJECT_NAME@"
+static const char fpsVersion_PROJECT_NAME[] = "@PROJECT_NAME@";
 
 //Software Status
 static const char fpsVersion_STATUS[] =  "Alpha";
