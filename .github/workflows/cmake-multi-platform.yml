@@ -33,7 +33,7 @@ jobs:
       id: strings
       shell: bash
       run: |
-        sudo apt-get install libwxgtk-dev
+        sudo apt-get install libwxgtk3.0-gtk3-dev
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
     - name: Configure CMake
