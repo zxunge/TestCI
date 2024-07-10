@@ -164,8 +164,8 @@ void FPSFrame::OnAbout(wxCommandEvent& WXUNUSED(event))
             <p>Contact: 3396563372@qq.com</p>                             \
             <p>Personal Webpage: https://zxunge.github.io</p>             \
             <h3>Version: ") +
-    FPSVersion::FULLVERSION_STRING +
-    FPSVersion::STATUS +
+    fpsVersion_FULLVERSION_STRING +
+    fpsVersion_STATUS +
     _T("</h3>") +
     _T("</body>                                                           \
         </html>                                                           \
