@@ -40,10 +40,11 @@ jobs:
         #3，安装库
         sudo apt-get install libwxbase3.2-0-unofficial \
                 libwxbase3.2unofficial-dev \
-                libwxgtk3.2-0-unofficial \
-                libwxgtk3.2unofficial-dev \
-                wx3.2-headers \
-                wx-common
+                libwxgtk3.2-0-unofficial   \
+                libwxgtk3.2unofficial-dev  \
+                wx3.2-headers              \
+                wx-common                  \
+                libnotify-dev
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
     - name: Configure CMake
