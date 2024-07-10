@@ -17,11 +17,17 @@ jobs:
       # Set up a matrix to run the following 3 configurations
       # 2. <Linux, Release, latest GCC compiler toolchain on the default runner image, default generator>
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, windows-latest]
         build_type: [Release]
-        c_compiler: [gcc]
+        c_compiler: [gcc, clang]
         include:
           - os: ubuntu-latest
+            c_compiler: gcc
+            cpp_compiler: g++
+          - os: ubuntu-latest
+            c_compiler: clang
+            cpp_compiler: clang++
+          - os: windows-latest
             c_compiler: gcc
             cpp_compiler: g++
 
@@ -38,7 +44,8 @@ jobs:
         sudo apt-add-repository 'deb https://repos.codelite.org/wx3.2/ubuntu/ jammy universe'
 
         #3，安装库
-        sudo apt-get install libwxbase3.2-0-unofficial \
+        sudo apt-get install               \
+                libwxbase3.2-0-unofficial  \
                 libwxbase3.2unofficial-dev \
                 libwxgtk3.2-0-unofficial   \
                 libwxgtk3.2unofficial-dev  \
