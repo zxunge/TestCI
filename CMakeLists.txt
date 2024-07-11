@@ -17,10 +17,7 @@ add_executable(
     "${PROJECT_SOURCE_DIR}/src/FPSApp.cpp" 
     "${PROJECT_SOURCE_DIR}/src/FPSMain.cpp" 
     "${PROJECT_SOURCE_DIR}/src/SplitThread.cpp" 
-    "${PROJECT_SOURCE_DIR}/src/fpsSplit.cpp"
-)
-list(
-    APPEND SOURCES 
+    "${PROJECT_SOURCE_DIR}/src/fpsSplit.cpp" 
     "${PROJECT_SOURCE_DIR}/resources/resource.rc"
 )
 find_package(wxWidgets COMPONENTS core base html OPTIONAL_COMPONENTS adv xml xrc)
