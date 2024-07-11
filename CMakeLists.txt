@@ -21,7 +21,7 @@ add_executable(
 )
 list(
     APPEND SOURCES 
-    "${PROJECT_SOURCE_DIR}/resources/resources.rc"
+    "${PROJECT_SOURCE_DIR}/resources/resource.rc"
 )
 find_package(wxWidgets COMPONENTS core base html OPTIONAL_COMPONENTS adv xml xrc)
 if(wxWidgets_FOUND)
