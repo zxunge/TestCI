@@ -3,7 +3,7 @@
 using std::vector;
 using std::tuple;
 
-tuple<int, int, vector<vector<wxRect>>> fpsImage::AuxGetOutputList(int rowsOrHeight, int colsOrWidth, fpsSplitMode mode = fpsSplitMode::byCounts)
+tuple<int, int, vector<vector<wxRect>>> fpsImage::AuxGetOutputList(int rowsOrHeight, int colsOrWidth, fpsSplitMode mode)
 {
     int width {m_image.GetWidth()},
         height {m_image.GetHeight()},
