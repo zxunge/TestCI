@@ -12,7 +12,7 @@ public:
     fpsImage() {}
     fpsImage(wxString path) {m_image.LoadFile(path);}
     ~fpsImage() {}
-    std::tuple<size_t, size_t, std::vector<std::vector<wxRect>>> AuxGetOutputList(int rowsOrHeight, int colsOrWidth, fpsSplitMode splitMode = fpsSplitMode::byCounts);
+    std::tuple<int, int, std::vector<std::vector<wxRect>>> AuxGetOutputList(int rowsOrHeight, int colsOrWidth, fpsSplitMode splitMode = fpsSplitMode::byCounts);
     void SetOutputList(std::vector<std::vector<wxRect>> list) {m_outputList = list;}
     int Split();
     bool Open(wxString path) {return m_image.LoadFile(path);}
