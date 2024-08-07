@@ -9,9 +9,9 @@ enum class fpsSplitMode { byCounts, byPixel };
 class fpsImage
 {
 public:
-    fpsImage();
+    fpsImage() {}
     fpsImage(wxString path) {m_image.LoadFile(path);}
-    ~fpsImage() {m_image.Close()}
+    ~fpsImage() {}
     std::tuple<size_t, size_t, std::vector<std::vector<wxRect>>> AuxGetOutputList(int rowsOrHeight, int colsOrWidth, fpsSplitMode splitMode = fpsSplitMode::byCounts);
     void SetOutputList(std::vector<std::vector<wxRect>> list) {m_outputList = list;}
     int Split();
