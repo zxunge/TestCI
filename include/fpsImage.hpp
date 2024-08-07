@@ -2,6 +2,7 @@
 #include <wx/dir.h>
 #include <wx/gdicmn.h>
 #include <vector>
+#include <tuple>
 
 enum class fpsSplitMode { byCounts, byPixel };
 
@@ -11,12 +12,12 @@ public:
     fpsImage();
     fpsImage(wxString path) {m_image.Open(path)}
     ~fpsImage() {m_image.Close()}
-    static std::vector<std::vector<wxRect>> GetOutputList(int rowsOrHeight, int colsOrWidth, fpsSplitMode splitMode = fpsSplitMode::byCounts);
+    std::tuple<size_t, size_t, std::vector<std::vector<wxRect>>> AuxGetOutputList(int rowsOrHeight, int colsOrWidth, fpsSplitMode splitMode = fpsSplitMode::byCounts);
     void SetOutputList(std::vector<std::vector<wxRect>> list) {m_outputList = list;}
     int Split();
     bool Open(wxString path) {return m_image.Open(path);}
 
 private:
-    wxImage                m_image;
+    wxImage                          m_image;
     std::vector<std::vector<wxRect>> m_outputList;
 }
